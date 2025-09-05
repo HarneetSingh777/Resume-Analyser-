@@ -1,0 +1,51 @@
+Resume Analyzer and Alternator
+This project is a full-stack web application that allows users to upload their resume, analyzes it, matches it to the most relevant job descriptions, and suggests alternative roles.
+
+Features
+Frontend: Simple UI for uploading resumes and viewing results, built with React and styled with Tailwind CSS.
+
+Backend: RESTful API built with Flask to handle file uploads, text extraction, NLP parsing, and job matching.
+
+NLP: Uses spaCy for keyword and entity extraction from resumes.
+
+Matching: Implements a TF-IDF and Cosine Similarity-based algorithm to find the best job matches.
+
+Alternator: Suggests alternative roles based on transferable skills found in the resume.
+
+Containerization: Ready for deployment using Docker.
+
+Project Structure
+Dockerfile: Defines the Docker image for the Flask backend.
+
+docker-compose.yml: Orchestrates the backend service.
+
+requirements.txt: Lists the Python dependencies.
+
+app.py: The main Flask application, containing the API endpoints.
+
+nlp_parser.py: Contains all the NLP-related logic for parsing and matching.
+
+job_data.py: A simple Python file acting as a mock database for job descriptions.
+
+index.html: The frontend entry point, which loads the React application.
+
+static/App.jsx: The complete, single-file React component for the user interface.
+
+How to Run the Project
+Prerequisites: Make sure you have Docker and Docker Compose installed on your system.
+
+Build and Run: From the root directory of the project, run the following command to build the Docker image and start the container:
+
+docker-compose up --build
+
+Access the Application: Once the containers are up and running, you can access the application in your web browser at:
+
+http://localhost:5000
+
+Usage:
+
+Click the "Choose File" button to select your resume (PDF, DOCX, or TXT).
+
+Click "Analyze Resume" to upload and process the file.
+
+The results will be displayed on the page, showing the best job matches, alternative roles, and actionable feedback.
