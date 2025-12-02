@@ -47,7 +47,10 @@ Usage:
 Click the "Choose File" button to select your resume (PDF, DOCX, or TXT).
 
 Click "Analyze Resume" to upload and process the file.
+
+streamlit
 pdfplumber
+
 
 
 The results will be displayed on the page, showing the best job matches, alternative roles, and actionable feedback.
